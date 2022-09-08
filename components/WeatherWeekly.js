@@ -120,33 +120,33 @@ function WeatherWeekly({weather,locData}) {
             </div>
             <div className='dataDetails'>
               <div classNamw='temp-data'>
-                <ListCard title='Temp'>
-                  <li>
+                <ListCard title='Temperature'>
+                  <li title="Minimum">
                     <span>min</span>
                     <div>⁓</div>
                     <span>{Math.ceil(topData.temp.min)}&deg;</span>
                   </li>
-                  <li>
+                  <li title="Maximum">
                     <span>max</span>
                     <div>⁓</div>
                     <span>{Math.ceil(topData.temp.max)}&deg;</span>
                   </li>
-                  <li>
+                  <li title="Morning">
                     <span>morn</span>
                     <div>⁓</div>
                     <span>{Math.ceil(topData.temp.morn)}&deg;</span>
                   </li>
-                  <li>
+                  <li title="Day">
                     <span>day</span>
                     <div>⁓</div>
                     <span>{Math.ceil(topData.temp.day)}&deg;</span>
                   </li>
-                  <li>
+                  <li title="Evening">
                     <span>eve</span>
                     <div>⁓</div>
                     <span>{Math.ceil(topData.temp.eve)}&deg;</span>
                   </li>
-                  <li>
+                  <li title="Night">
                     <span>night</span>
                     <div>⁓</div>
                     <span>{Math.ceil(topData.temp.night)}&deg;</span>
@@ -175,12 +175,49 @@ function WeatherWeekly({weather,locData}) {
                     <div>-</div>
                     <span>{getTime(topData.moonset)}</span>
                   </li>
-                  <center><div class="sphere">
+                  <center><div title='Moon Phase' class="sphere">
                     <div class="light hemisphere"></div>
                     <div class="dark hemisphere"></div>
                     <div class="divider"></div>
                   </div></center>
                 </ListCard>
+              </div>
+              <div className='forecast-data'>
+                <ListCard title='Weather Forecast Data'>
+                  <li>
+                    <span>humidity</span>
+                    <div>⁓</div>
+                    <span>{Math.ceil(topData.humidity)} %</span>
+                  </li>
+                  <li>
+                    <span>pressure</span>
+                    <div>⁓</div>
+                    <span>{topData.pressure}</span>
+                  </li>
+                  <li>
+                    <span>clouds</span>
+                    <div>⁓</div>
+                    <span>{topData.clouds} %</span>
+                  </li>
+                  <li>
+                    <span>UV Index</span>
+                    <div>⁓</div>
+                    <span>{topData.uvi}</span>
+                  </li>
+                  <li>
+                    <span>wind speed</span>
+                    <div>⁓</div>
+                    <span>{topData.wind_speed} km/h</span>
+                  </li>
+                  <li>
+                    <span>wind gust</span>
+                    <div>⁓</div>
+                    <span>{topData.wind_gust} km/h</span>
+                  </li>
+                </ListCard>
+              </div>
+              <div className='other-data'>
+                
               </div>
             </div>
           </div>

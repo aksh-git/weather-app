@@ -119,7 +119,7 @@ export default function Home() {
                   width='100%'
                   />  </a>
                 </span>
-                <span className={styles.wtext}></span>
+                <span className={styles.wtext}>Powered by <a target='_blank' href='https://openweathermap.org/api/'>OpenWeatherMapAPI</a></span>
               </div>
             </div>
           </div>

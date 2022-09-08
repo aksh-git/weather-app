@@ -106,7 +106,19 @@ html, body{
 .dataDetails{
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 1%;
+}
+.dataDetails .temp-data{
+    width: 19%;
+}
+.dataDetails .time-data{
+    width: 24%;
+}
+.dataDetails .forecast-data{
+    width: 34%;
+}
+.dataDetails .other-data{
+    width: 19%;
 }
 /*card*/
 .w-card{
@@ -171,7 +183,7 @@ html, body{
 }
 /* Listcard */
 .listcard{
-    min-width: 130px;
+    width: 100%;
     background-color: rgba(0,0,0,0.3);
     backdrop-filter: blur(4px);
     border-radius: 0.5rem;
@@ -186,7 +198,7 @@ html, body{
     text-align: center;
     font-size: 0.999rem;
     font-weight: 700;    
-    padding: 0.3rem 0;
+    padding: 0.3rem 1rem;
     border-bottom: 1px solid #ffffff30;
 }
 .listcard ul{
@@ -194,10 +206,11 @@ html, body{
     list-style: none;
 }
 .listcard ul li{
+    cursor: pointer;
     margin: 0;
     font-size: 14px;
     font-weight: 600;
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 0.4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -206,11 +219,14 @@ html, body{
 .listcard ul li span{
     margin: 0;
     line-height: 1px;
-    text-transform: capitalize;
     padding: 0 0.5rem;
 }
 .listcard ul li span:first-child{
-    width: 45%;
+    text-transform: capitalize;
+    min-width: 45%;
+}
+.listcard ul li span:last-child{
+    min-width: 45%;
 }
 /* .listcard ul li span:last-child{
     width: 35%;
@@ -297,7 +313,6 @@ html, body{
     opacity: 0;
   }
 }
-  
 
 /*Moon Phase*/
 .sphere {
