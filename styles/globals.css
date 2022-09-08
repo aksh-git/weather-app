@@ -106,6 +106,7 @@ html, body{
 .dataDetails{
     display: flex;
     flex-wrap: wrap;
+    gap: 0.5rem;
 }
 /*card*/
 .w-card{
@@ -206,15 +207,16 @@ html, body{
     margin: 0;
     line-height: 1px;
     text-transform: capitalize;
+    padding: 0 0.5rem;
 }
 .listcard ul li span:first-child{
-    width: 35%;
+    width: 45%;
 }
-.listcard ul li span:last-child{
+/* .listcard ul li span:last-child{
     width: 35%;
     justify-self: flex-end;
     padding-left: 5px;
-}  
+}   */
 
 /* Spinner */
 
@@ -296,3 +298,47 @@ html, body{
   }
 }
   
+
+/*Moon Phase*/
+.sphere {
+    margin: 2px;
+    border-radius: 100%;
+    width: 55px;
+    height: 55px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.hemisphere {
+    width: 50%;
+    height: 100%;
+}
+
+.light {
+    background-color: #F4F6F0;
+}
+
+.dark {
+    background-color: #575851;
+}
+.divider,
+.divider:after {
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    border-radius: 100%;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.divider {
+    background-color: #575851; /* Dark */
+}
+.divider:after {
+    content: '';
+    background-color: #F4F6F0; /* Light */
+    transform: rotateY(180deg);
+}

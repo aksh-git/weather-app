@@ -111,13 +111,13 @@ export default function Home() {
               </div>
               <div className={styles.wtypeData}>
                 <span className={styles.wicon}>
-                  {/* <img
-                  src={`https://openweathermap.org/img/wn/${weather['current'].weather[0].icon}@2x.png`}
-                  alt="Weather Icon"
+                  <a target='_blank' href='https://akash-web.netlify.app'><img
+                  src={`https://raw.githubusercontent.com/aksh-git/assets/main/logo-dark.svg`}
+                  alt="Akash yadav"
                   layout="fill"
                   height='100%'
                   width='100%'
-                  />   */}
+                  />  </a>
                 </span>
                 <span className={styles.wtext}></span>
               </div>

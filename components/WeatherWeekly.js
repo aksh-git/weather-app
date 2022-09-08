@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Wcard from './cards/wcard'
 import moment from "moment-timezone";
 import ListCard from './cards/ListCard';
@@ -11,9 +11,37 @@ function WeatherWeekly({weather,locData}) {
 
   const [topData, settopData] = useState(dailyData[0])
   
-  console.log(locData);
   function getTime(timeinMilli){
     return moment.unix(timeinMilli).tz(weather['timezone']).format("LT")
+  }
+
+  const setMoonRotation = deg => {
+    document.querySelector('.divider').style.transform = `rotate3d(0, 1, 0, ${deg}deg)`
+  
+    const hemispheres = document.querySelectorAll('.hemisphere')
+  
+    if (deg < 180) {
+      // Left
+      hemispheres[0].classList.remove('dark')
+      hemispheres[0].classList.add('light')
+  
+      // Right
+      hemispheres[1].classList.add('dark')
+      hemispheres[1].classList.remove('light')
+    } else {
+      // Left
+      hemispheres[0].classList.add('dark')
+      hemispheres[0].classList.remove('light')
+  
+      // Right
+      hemispheres[1].classList.remove('dark')
+      hemispheres[1].classList.add('light')
+    }
+  }
+
+  const getMoonPhaseRotation = ()=>{
+    let mp = topData.moon_phase;
+    return 360 - Math.floor(mp * 360)
   }
 
   function getdate(timeinMilli){
@@ -22,6 +50,11 @@ function WeatherWeekly({weather,locData}) {
   function getday(timeinMilli){
     return moment.unix(timeinMilli).tz(weather['timezone']).day()
   } 
+
+  useEffect(() => {
+    setMoonRotation(getMoonPhaseRotation())
+  }, [topData])
+  
 
   const tempdata = {
     "dt": 1662532200,
@@ -118,6 +151,35 @@ function WeatherWeekly({weather,locData}) {
                     <div>⁓</div>
                     <span>{Math.ceil(topData.temp.night)}&deg;</span>
                   </li>
+                </ListCard>
+              </div>
+              <div className='time-data'>
+                <ListCard title='Timestamps'>
+                  <li>
+                    <span>Sunrise</span>
+                    <div>-</div>
+                    <span>{getTime(topData.sunrise)}</span>
+                  </li>
+                  <li>
+                    <span>Sunset</span>
+                    <div>-</div>
+                    <span>{getTime(topData.sunset)}</span>
+                  </li>
+                  <li>
+                    <span>moonrise</span>
+                    <div>-</div>
+                    <span>{getTime(topData.moonrise)}</span>
+                  </li>
+                  <li>
+                    <span>moonset</span>
+                    <div>-</div>
+                    <span>{getTime(topData.moonset)}</span>
+                  </li>
+                  <center><div class="sphere">
+                    <div class="light hemisphere"></div>
+                    <div class="dark hemisphere"></div>
+                    <div class="divider"></div>
+                  </div></center>
                 </ListCard>
               </div>
             </div>
