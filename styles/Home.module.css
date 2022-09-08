@@ -1,0 +1,153 @@
+.home{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url('/assets/images/Clouds.jpg');
+    background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}   
+.wrap{
+    background-color: #ffffff10;
+    backdrop-filter: blur(50px);
+    min-height: 100%;
+    min-width: 100%;
+}
+.main{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 80%;
+    min-height: 85%;
+    background-image: url('/assets/images/Clouds.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: screen;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.65rem;
+}
+.leftTab{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.rightTab{
+    position: relative;
+    display: block;
+    width: 35%;
+    background-color: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem;
+    border-radius: 0 0.65rem 0.65rem 0;
+}
+.leftTab .dataInDetail{
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    backdrop-filter: blur(10px);
+}
+.leftTab .data{
+    padding: 0 5% 5% 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+    /* background-color: rgba(0, 0, 0, .1);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px); */
+}
+.data .temp{
+    font-size: 5.543rem;
+    font-weight: 700;
+    line-height: 1rem;
+    letter-spacing: -1px;
+}
+.cityDetails{
+    display: grid;
+}
+.cityDetails .city{
+    font-size: 1.606rem;
+    font-weight: 600;
+}
+.cityDetails .region{
+    font-size: 1.134rem;
+    font-size: 500;
+    margin-top: -7px;
+}
+.cityDetails .timestamps{
+    font-size: 0.925rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+.wtypeData{
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wtypeData .wicon{
+    height: 4rem;
+    width: 4rem;
+}
+.wtypeData .wicon img{
+    margin: 0;
+    padding: 0;
+}
+.wtypeData .wtext{
+    font-size: 0.995rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 5px;
+}
+
+.rightTab .currentW{
+    color: #ffffff;
+    padding: 1rem 2rem;
+}
+.currentW .item{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    margin: 0.5rem 1rem;
+}
+.currentW .item .title{
+    font-size: .995rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    width: 35%;
+}
+.currentW .item .wtext{
+    font-size: 1.095rem;
+    font-weight: 600;
+    width: 35%;
+}
+
+@media screen and (max-width:900px) {
+    .main{
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
+    .leftTab{
+        width: 100%;
+        height: max-content;
+        justify-content: center;
+        align-items: center;
+    }
+    .leftTab .data{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .rightTab{
+        height: max-content;
+        width: 100%;
+    }
+}

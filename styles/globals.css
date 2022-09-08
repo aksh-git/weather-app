@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&display=swap');
+*{
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background-color:#b8d4e9;
+}
+.container{
+    padding: 1rem;
+    max-width: 1400px;
+    margin: auto;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.loader{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    text-align: center;
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter:blur(4px);
+}
+.loader .wrap{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.activeday .w-card{
+    transition: 150ms;
+    transform: scale(1.1);
+    background-color: rgba(0,0,0,0.4);
+}
+.weeklyWeather{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+}
+.wDailydata{
+    backdrop-filter: blur(4px);
+    border-radius: 0.5rem;
+    height: 100%;
+    width: 100%;
+}
+/* .wdd-wrap{
+    padding: 0.5rem;
+} */
+.wDailydata .wdd-wrap .main{
+    width: 100%;
+
+    border-radius: 0.5rem;
+}
+.wdd-wrap .main .data{
+    display: flex;
+    justify-content: space-between;
+}
+.wdd-wrap .main .data .data-1, .wdd-wrap .main .data .data-2{
+    color: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+}
+.wdd-wrap .main .data .data-2{
+    color: #ffffff30;
+}
+.main .data .data-1 .wddm-icon{
+    height: 80px;
+    width: 80px;
+}
+.main .data .data-1 .wddm-icon img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.3);
+}
+.main .data .data-1 .wddm-main,.main .data .data-2 .wddm-main {
+    display: flex;
+    flex-direction: column;
+}
+.main .data .data-2 .wddm-main {
+    align-items: flex-end;
+}
+.main .data .data-2 .wddm-main .day,.main .data .data-1 .wddm-main .type{
+    font-size: 1.723rem;
+    font-weight: 800;
+    line-height: 1.5rem;
+}
+.main .data .data-1 .wddm-main .decp,.main .data .data-2 .wddm-main .date{
+    font-size: 1.223rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.dataDetails{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*card*/
+.w-card{
+    height: 90px;
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 0.4rem 0.5rem;
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    cursor: pointer;
+    transition: 150ms;
+}
+/* .w-card:hover{
+    transform: scale(1.05);
+} */
+.w-card .wc-wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.w-card .wc-wrap .day{
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.w-card .wc-wrap  .main{
+    margin-top: -5px;
+    font-size: 0.995rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.w-card .wc-wrap .temp{
+    font-size: 0.895rem;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.w-card .wc-wrap .image-wrap{
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    margin: 0;
+}
+.w-card .wc-wrap img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.5);
+}
+
+.ww-card-area .wwc-wraper {
+    display: flex;
+    gap: 0.5rem;
+    overflow: visible;
+}
+/* Listcard */
+.listcard{
+    min-width: 130px;
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: blur(4px);
+    border-radius: 0.5rem;
+    color: #ffffff;
+}
+.lc-wrap{
+    width: 100%;
+    padding: 0.3rem 0;
+}
+.lc-wrap .header{
+    width: 100%;
+    text-align: center;
+    font-size: 0.999rem;
+    font-weight: 700;    
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #ffffff30;
+}
+.listcard ul{
+    all: unset;
+    list-style: none;
+}
+.listcard ul li{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0.2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: 5px;
+}
+.listcard ul li span{
+    margin: 0;
+    line-height: 1px;
+    text-transform: capitalize;
+}
+.listcard ul li span:first-child{
+    width: 35%;
+}
+.listcard ul li span:last-child{
+    width: 35%;
+    justify-self: flex-end;
+    padding-left: 5px;
+}  
+
+/* Spinner */
+
+.lds-spinner {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: #fff;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+  
