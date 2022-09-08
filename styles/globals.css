@@ -210,7 +210,7 @@ html, body{
     margin: 0;
     font-size: 14px;
     font-weight: 600;
-    padding: 0.2rem 0.4rem;
+    padding: 0.2rem 0.3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -223,10 +223,10 @@ html, body{
 }
 .listcard ul li span:first-child{
     text-transform: capitalize;
-    min-width: 45%;
+    min-width: 48%;
 }
 .listcard ul li span:last-child{
-    min-width: 45%;
+    min-width: 100%;
 }
 /* .listcard ul li span:last-child{
     width: 35%;
