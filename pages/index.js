@@ -108,7 +108,7 @@ export default function Home() {
                 <span className={styles.city}>{locData.city}</span>
                 <span className={styles.region}>{locData.region},{locData.country_name}</span>
                 {/* <span className={styles.timestamps}>{getTime(weather['current'].dt)} - {weekNames[date.getDay()]} , {date.getDate()} {monthNames[date.getMonth()]} '{date.getFullYear().toString().slice(2)}</span> */}
-                <span className={styles.timestamps}>last Updated -{getTime(weather['current'].dt)}</span>
+                <span className={styles.timestamps}>Last Updated - {getTime(weather['current'].dt)} today.</span>
               </div>
               <div className={styles.wtypeData}>
                 <span className={styles.wicon}>
