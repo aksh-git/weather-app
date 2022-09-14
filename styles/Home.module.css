@@ -96,6 +96,7 @@
 .wtypeData .wicon{
     height: 2rem;
     width: 5rem;
+    opacity: 0.4;
 }
 .wtypeData .wicon img{
     margin: 0;

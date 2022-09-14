@@ -3,7 +3,7 @@ import Wcard from './cards/wcard'
 import moment from "moment-timezone";
 import ListCard from './cards/ListCard';
 
-function WeatherWeekly({weather,locData}) {
+function WeatherWeekly({weather, locData}) {
 
   const weekNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 
@@ -55,46 +55,6 @@ function WeatherWeekly({weather,locData}) {
     setMoonRotation(getMoonPhaseRotation())
   }, [topData])
   
-
-  const tempdata = {
-    "dt": 1662532200,
-    "sunrise": 1662510946,
-    "sunset": 1662556402,
-    "moonrise": 1662549960,
-    "moonset": 1662496740,
-    "moon_phase": 0.38,
-    "temp": {
-      "day": 33.02,
-      "min": 24.52,
-      "max": 34.13,
-      "night": 27.33,
-      "eve": 30.96,
-      "morn": 24.52
-    },
-    "feels_like": {
-      "day": 37.23,
-      "night": 29.33,
-      "eve": 35.01,
-      "morn": 25.04
-    },
-    "pressure": 1008,
-    "humidity": 53,
-    "dew_point": 22.15,
-    "wind_speed": 2.07,
-    "wind_deg": 45,
-    "wind_gust": 2.11,
-    "weather": [
-      {
-        "id": 800,
-        "main": "Clear",
-        "description": "clear sky",
-        "icon": "01d"
-      }
-    ],
-    "clouds": 0,
-    "pop": 0,
-    "uvi": 9.17
-  }
   let date = new Date()
   return (
     <div className='weeklyWeather'>

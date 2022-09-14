@@ -94,12 +94,12 @@ html, body{
     align-items: flex-end;
 }
 .main .data .data-2 .wddm-main .day,.main .data .data-1 .wddm-main .type{
-    font-size: 1.723rem;
+    font-size: 1.523rem;
     font-weight: 800;
     line-height: 1.5rem;
 }
 .main .data .data-1 .wddm-main .decp,.main .data .data-2 .wddm-main .date{
-    font-size: 1.223rem;
+    font-size: 1.23rem;
     font-weight: 500;
     text-transform: capitalize;
 }
@@ -122,8 +122,8 @@ html, body{
 }
 /*card*/
 .w-card{
-    height: 90px;
-    width: 75px;
+    height: 80px;
+    width: 65px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,19 +148,19 @@ html, body{
     align-items: center;
 }
 .w-card .wc-wrap .day{
-    font-size: 1.125rem;
+    font-size: .925rem;
     font-weight: 500;
     text-transform: capitalize;
 }
 .w-card .wc-wrap  .main{
     margin-top: -5px;
-    font-size: 0.995rem;
+    font-size: 0.895rem;
     font-weight: 500;
     text-transform: capitalize;
 }
 
 .w-card .wc-wrap .temp{
-    font-size: 0.895rem;
+    font-size: 0.795rem;
     font-weight: 400;
     text-transform: capitalize;
 }
