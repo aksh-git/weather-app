@@ -118,7 +118,7 @@ export default function Home() {
                   layout="fill"
                   height='100%'
                   width='100%'
-                  />  </a>
+                  /></a>
                 </span>
               </div>
             </div>
