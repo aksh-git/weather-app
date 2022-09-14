@@ -6,6 +6,7 @@
     background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: background-image 1s;
 }   
 .wrap{
     background-color: #ffffff10;
@@ -28,6 +29,7 @@
     display: flex;
     justify-content: space-between;
     border-radius: 0.65rem;
+    transition: background-image 1s;
 }
 .leftTab{
     width: 70%;

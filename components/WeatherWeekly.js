@@ -55,6 +55,24 @@ function WeatherWeekly({weather, locData}) {
     setMoonRotation(getMoonPhaseRotation())
   }, [topData])
   
+  const changeBackground =(type)=> {
+    console.log(type);
+    switch (type) {
+      case 'rain':
+        document.getElementById('home').style.backgroundImage =`url('/assets/images/rain.jpg')`;
+        document.getElementById('main').style.backgroundImage =`url('/assets/images/rain.jpg')`;
+        break;
+      case 'clear':
+        document.getElementById('home').style.backgroundImage =`url('/assets/images/clear_sky.jpg')`;
+        document.getElementById('main').style.backgroundImage =`url('/assets/images/clear_sky.jpg')`;
+        break;
+      default:
+        document.getElementById('home').style.backgroundImage =`url('/assets/images/few_clouds.jpg')`;
+        document.getElementById('main').style.backgroundImage =`url('/assets/images/few_clouds.jpg')`;
+        break;
+    }
+  }
+
   let date = new Date()
   return (
     <div className='weeklyWeather'>
@@ -186,7 +204,8 @@ function WeatherWeekly({weather, locData}) {
       <div className='ww-card-area'>
         <div className='wwc-wraper'>
           {dailyData.map((ddata)=>{
-            return <span className={`${topData.dt===ddata.dt?'activeday':''}`} onClick={()=>{settopData(ddata)}} key={ddata.dt}>
+            
+            return <span className={`${topData.dt===ddata.dt?'activeday':''}`} onClick={()=>{settopData(ddata);changeBackground(ddata.weather[0].main.toLowerCase())}} key={ddata.dt}>
               <Wcard 
             icon={`https://openweathermap.org/img/wn/${ddata.weather[0].icon}@2x.png`}
             day={getday(ddata.dt)}

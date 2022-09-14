@@ -95,9 +95,9 @@ export default function Home() {
   return (
     <>
     {!weather['current'] && <Loader text='weather data...' color='#fff'/>}
-    <div className={`${styles.home}`}>
+    <div id="home" className={`${styles.home}`}>
       <div className={`${styles.wrap}`}>
-        {weather['current'] && <div className={`center ${styles.main}`}>
+        {weather['current'] && <div id="main" className={`center ${styles.main}`}>
           <div className={styles.leftTab}>
             <div className={styles.dataInDetail}>
               <WeatherWeekly weather={weather} locData={locData} />
